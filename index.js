@@ -255,7 +255,7 @@ function TailStream(filepath, opts) {
         if(!this.fd) {
             return false;
         }
-        var buffer = Buffer.alloc(16 * 1024);
+        var buffer = Buffer.alloc(8 * 1024);
         fs.read(this.fd, buffer, 0, buffer.length, this.bytesRead, (err, bytesRead) => {
             if(err) {
                 if(this.opts.endOnError) {
